@@ -49,7 +49,11 @@ if form:
     pathway=form.getvalue("pathway")
     
     if dropdown == "g_symbol":
+<<<<<<< HEAD
+        query1 = "select foldChange, symbol, Gene.title, path, goTitle from Gene join DataInstance using(uniGeneID) join Instance-Pathway using(affyID) join join GoMF using(affyID) join GoCC using(affyID) join GoBP using(BoBP) join GOs using goID where Gene.symbol like "%(gene_symbol)
+=======
         query1 = "select foldChange, symbol, Gene.title, pathTitle, goTitle from Gene join DataInstance using(uniGeneID) join Pathway using(PathID) join GoMF using(affyID) join GoCC using(affyID) join GoBP using(BoBP) join GOs using goID where Gene.symbol like "%(gene_symbol)
+>>>>>>> ef60bac0a7557c4b831cccff529accb0c330fecf
         if foldchange:
             query1 += "sort by foldChange"
         if gene_symbol:
@@ -62,7 +66,11 @@ if form:
             query1 += "sort by goTitle"
             
     if dropdown == "g_title":
+<<<<<<< HEAD
+        query1 = "select foldChange, symbol, Gene.title, path, goTitle from Gene join DataInstance using(uniGeneID) join Instance-Pathway using(affyID) join join GoMF using(affyID) join GoCC using(affyID) join GoBP using(BoBP) join GOs using goID where Gene.symbol like "%(gene_title)
+=======
         query1 = "select foldChange, symbol, Gene.title, pathTitle, goTitle from Gene join DataInstance using(uniGeneID) join Pathway using(PathID) join GoMF using(affyID) join GoCC using(affyID) join GoBP using(BoBP) join GOs using goID where Gene.symbol like "%(gene_title)
+>>>>>>> ef60bac0a7557c4b831cccff529accb0c330fecf
         if foldchange:
             query1 += "sort by foldChange"
         if gene_symbol:
@@ -75,7 +83,7 @@ if form:
             query1 += "sort by goTitle"
     
     if dropdown == "pathway":
-        query1 = "select foldChange, symbol, Gene.title, pathTitle, goTitle from Gene join DataInstance using(uniGeneID) join Pathway using(PathID) join GoMF using(affyID) join GoCC using(affyID) join GoBP using(BoBP) join GOs using goID where Gene.symbol like "%(pathway)
+        query1 = "select foldChange, symbol, Gene.title, path, goTitle from Gene join DataInstance using(uniGeneID) join Instance-Pathway using(affyID) join join GoMF using(affyID) join GoCC using(affyID) join GoBP using(BoBP) join GOs using goID where Gene.symbol like "%(pathway)
         if foldchange:
             query1 += "sort by foldChange"
         if gene_symbol:
