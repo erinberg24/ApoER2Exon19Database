@@ -22,16 +22,39 @@ print("""
 
 """)
 
-# Form
+# Form with 3 search boxes and 3 dropdown menus
 print("""
 <form name="Search Order" action="https://bioed.bu.edu/cgi-bin/students_20/students_20/groupG/filename" method="post">
 
- <select name = "dropdown">
- <option value="g_symbol">Gene Symbol</option>
- <option value="g_title">Gene title</option>
- <option value="pathway">Pathway</option>
 
-<input type="text" name="search"/><br/>
+    <SELECT name="search_dropdown_1">
+        <option value="g_symbol">Gene Symbol</option>
+        <option value="g_title">Gene title</option>
+        <option value="pathway">Pathway</option>
+    </SELECT>
+
+    <input type="text" name="search_box_1">
+
+    <br>
+
+    <select name="search_dropdown_2">
+        <option value="gene_symbol" selected>Gene Symbol</option>
+        <option value="gene_title=">Gene Title</option>
+        <option value="pathway">Pathway</option>
+    </select>
+
+	<input type="text" name="search_box_2">
+	
+    <br>
+    
+    <select name="search_dropdown_2">
+        <option value="gene_symbol" selected>Gene Symbol</option>
+        <option value="gene_title=">Gene Title</option>
+        <option value="pathway">Pathway</option>
+    </select>
+	
+    <input type="text" name="seach_box_3">
+
 Sort by: <input type="checkbox" name="sort" value="foldchange" /> Fold change
  <input type="checkbox" name="sort" value="gene_symbol" /> Gene symbol
  <input type="checkbox" name="sort" value="gene_title" /> Gene
