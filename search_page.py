@@ -24,7 +24,7 @@ print("""
 
 # Form
 print("""
-<form name="Search Order" action="https://bioed.bu.edu/cgi-bin/students_20/smit2/projdb.py" method="post">
+<form name="Search Order" action="https://bioed.bu.edu/cgi-bin/students_20/students_20/groupG/filename" method="post">
 
  <select name = "dropdown">
  <option value="g_symbol">Gene Symbol</option>

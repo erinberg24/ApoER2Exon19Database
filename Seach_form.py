@@ -17,7 +17,7 @@ for value in hjk:
 print("""
 	<fieldset>
 		<legend>Enter New Order:</legend>""","""
-<form name="Orders" action="https://bioed.bu.edu/cgi-bin/students_20/cwill96/coryw_add_order" method="post">
+<form name="Orders" action="https://bioed.bu.edu/cgi-bin/students_20/groupG/filename" method="post">
 		<label for="cars">Product:</label>
   			<select id="cars" name="cars">
     			{OPTIONS}
