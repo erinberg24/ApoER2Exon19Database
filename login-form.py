@@ -1,7 +1,5 @@
 #!/usr/local/Python-3.7/bin/Python
 import pymysql
-import sys
-import re
 import hashlib
 import cgi
 import cgitb
