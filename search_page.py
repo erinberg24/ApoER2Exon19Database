@@ -1,35 +1,39 @@
 #!/usr/local/Python-3.7/bin/python
-#import pymysql
+import pymysql
 import sys
 import cgi
 import mysql.connector
 import cgitb
 cgitb.enable()
 
-connection = mysql.connector.connect(
-    host="bioed.bu.edu", user='smit2', password='smit2', database='groupG', port='4253')
-cursor = connection.cursor()
+myuser = ""
+mypassword = "" 
+database1 = ""
 
-# content type
+# print content-type
 print("Content-type: text/html\n")
+
+
+connection = mysql.connector.connect(host="bioed.bu.edu", user=myuser, password=mypassword, database=database1, port='4253')
+cursor = connection.cursor()
 
 # html
 print("""
 <html>
 <title>Search using gene symbol, gene title, pathway</title>
-<header></header>
+<header>Search Tab</header>
 <body>
 
 """)
 
-# Form with 3 search boxes and 3 dropdown menus
+#creates the 3 dropdown selectors and 3 serach boxes along with the sort by checkboxes and the submit button in a form
 print("""
-<form name="Search Order" action="https://bioed.bu.edu/cgi-bin/students_20/students_20/groupG/filename" method="post">
+<form name="Search Order" action="https://bioed.bu.edu/cgi-bin/students_20/locationthatthefilewillbe" method="post">
 
 
     <SELECT name="search_dropdown_1">
-        <option value="g_symbol">Gene Symbol</option>
-        <option value="g_title">Gene title</option>
+        <option value="gene_symbol">Gene Symbol</option>
+        <option value="gene_title">Gene title</option>
         <option value="pathway">Pathway</option>
     </SELECT>
 
@@ -39,7 +43,7 @@ print("""
 
     <select name="search_dropdown_2">
         <option value="gene_symbol" selected>Gene Symbol</option>
-        <option value="gene_title=">Gene Title</option>
+        <option value="gene_title">Gene Title</option>
         <option value="pathway">Pathway</option>
     </select>
 
@@ -47,96 +51,128 @@ print("""
 	
     <br>
     
-    <select name="search_dropdown_2">
+    <select name="search_dropdown_3">
         <option value="gene_symbol" selected>Gene Symbol</option>
-        <option value="gene_title=">Gene Title</option>
+        <option value="gene_title">Gene Title</option>
         <option value="pathway">Pathway</option>
     </select>
 	
-    <input type="text" name="seach_box_3">
-
-Sort by: <input type="checkbox" name="sort" value="foldchange" /> Fold change
- <input type="checkbox" name="sort" value="gene_symbol" /> Gene symbol
- <input type="checkbox" name="sort" value="gene_title" /> Gene
- <input type="checkbox" name="sort" value="sort_pathway" /> Pathway
- <input type="checkbox" name="sort" value="GO" /> GO title<br
+    <input type="text" name="search_box_3">
+	<br>
+	<br>
+Sort by: <input type="checkbox" name="sort1" value="foldchange" /> Fold change
+ <input type="checkbox" name="sort2" value="gene_symbol" /> Gene symbol
+ <input type="checkbox" name="sort3" value="gene_title" /> Gene
+ <input type="checkbox" name="sort4" value="sort_pathway" /> Pathway
+ <input type="checkbox" name="sort5" value="GO" /> GO title<br
 />
 <input type="submit" value="Submit" /> 
 """)
 
+#stores the files from above
 form = cgi.FieldStorage()
-      
+
+
+#queries needed throughout the search
+query1 = "select foldChange, symbol, Gene.title, pathTitle, goTitle from Gene join DataInstance using(uniGeneID) join Pathway using(PathID) join GoMF using(affyID) join GoCC using(affyID) join GoBP using(BoBP) join GOs using goID where Gene.symbol like"
+query1 = "select foldChange, symbol, Gene.title, path, goTitle from Gene join DataInstance using(uniGeneID) join Instance-Pathway using(affyID) join join GoMF using(affyID) join GoCC using(affyID) join GoBP using(BoBP) join GOs using goID where Gene.symbol like "#%(gene_symbol)
+query1 = "select foldChange, symbol, Gene.title, pathTitle, goTitle from Gene join DataInstance using(uniGeneID) join Pathway using(PathID) join GoMF using(affyID) join GoCC using(affyID) join GoBP using(BoBP) join GOs using goID where Gene.symbol like "#%(gene_symbol)
+query1 = "select foldChange, symbol, Gene.title, pathTitle, goTitle from Gene join DataInstance using(uniGeneID) join Pathway using(PathID) join GoMF using(affyID) join GoCC using(affyID) join GoBP using(BoBP) join GOs using goID where Gene.symbol like "#%(gene_title)
+query1 = "select foldChange, symbol, Gene.title, path, goTitle from Gene join DataInstance using(uniGeneID) join Instance-Pathway using(affyID) join join GoMF using(affyID) join GoCC using(affyID) join GoBP using(BoBP) join GOs using goID where Gene.symbol like "#%(pathway)
+
+# form storing variables connected to html forms above
 if form:
-    g_symbol=form.getvalue("g_symbol")
-    g_title=form.getvalue("g_title")
-    pathway=form.getvalue("pathway")
-    
-    if dropdown == "g_symbol":
-<<<<<<< HEAD
-        query1 = "select foldChange, symbol, Gene.title, path, goTitle from Gene join DataInstance using(uniGeneID) join Instance-Pathway using(affyID) join join GoMF using(affyID) join GoCC using(affyID) join GoBP using(BoBP) join GOs using goID where Gene.symbol like "%(gene_symbol)
-=======
-        query1 = "select foldChange, symbol, Gene.title, pathTitle, goTitle from Gene join DataInstance using(uniGeneID) join Pathway using(PathID) join GoMF using(affyID) join GoCC using(affyID) join GoBP using(BoBP) join GOs using goID where Gene.symbol like "%(gene_symbol)
->>>>>>> ef60bac0a7557c4b831cccff529accb0c330fecf
-        if foldchange:
-            query1 += "sort by foldChange"
-        if gene_symbol:
-            query1 += "sort by Gene.symbol"
-        if gene_title:
-            query1 += "sort by Gene.title
-        if sort_pathway:
-            query1 += "sort by pathTitle"
-        if GO:
-            query1 += "sort by goTitle"
-            
-    if dropdown == "g_title":
-<<<<<<< HEAD
-        query1 = "select foldChange, symbol, Gene.title, path, goTitle from Gene join DataInstance using(uniGeneID) join Instance-Pathway using(affyID) join join GoMF using(affyID) join GoCC using(affyID) join GoBP using(BoBP) join GOs using goID where Gene.symbol like "%(gene_title)
-=======
-        query1 = "select foldChange, symbol, Gene.title, pathTitle, goTitle from Gene join DataInstance using(uniGeneID) join Pathway using(PathID) join GoMF using(affyID) join GoCC using(affyID) join GoBP using(BoBP) join GOs using goID where Gene.symbol like "%(gene_title)
->>>>>>> ef60bac0a7557c4b831cccff529accb0c330fecf
-        if foldchange:
-            query1 += "sort by foldChange"
-        if gene_symbol:
-            query1 += "sort by Gene.symbol"
-        if gene_title:
-            query1 += "sort by Gene.title
-        if sort_pathway:
-            query1 += "sort by pathTitle"
-        if GO:
-            query1 += "sort by goTitle"
-    
-    if dropdown == "pathway":
-        query1 = "select foldChange, symbol, Gene.title, path, goTitle from Gene join DataInstance using(uniGeneID) join Instance-Pathway using(affyID) join join GoMF using(affyID) join GoCC using(affyID) join GoBP using(BoBP) join GOs using goID where Gene.symbol like "%(pathway)
-        if foldchange:
-            query1 += "sort by foldChange"
-        if gene_symbol:
-            query1 += "sort by Gene.symbol"
-        if gene_title:
-            query1 += "sort by Gene.title
-        if sort_pathway:
-            query1 += "sort by pathTitle"
-        if GO:
-            query1 += "sort by goTitle"
-            
-    cursor.execute(query1)
-    rows = cursor.fetchall()
+#Each search form set to variables to call from
+	search_box_1 = form.getvalue("search_box_1")
+	search_box_2 = form.getvalue("search_box_2")
+	search_box_3 = form.getvalue("search_box_3")
+	search_dropdown_1 = form.getvalue("search_dropdown_1")
+	search_dropdown_2 = form.getvalue("search_dropdown_2")
+	search_dropdown_3 = form.getvalue("search_dropdown_3")
+	sort1 = form.getvalue("sort1")
+	sort2 = form.getvalue("sort2")
+	sort3 = form.getvalue("sort3")
+	sort4 = form.getvalue("sort4")
+	sort5 = form.getvalue("sort5")
 
-    if rows:
-        for row in rows:
-            print("""
-            <tr>
-                <td>%s</td>
-                <td>%s</td>
-                <td>%s</td>
-                <td>%s</td>
-                <td>%s</td>
-            </tr>"""%(row[0], row[1], row[2], row[3], row[4]))
-        print("""</table>""")
-    else:
-        print("""Please try searching again""")
+#if statements for search boxes dropdowns and sort checkboxes using vairable assinged above
+#first search dropdown and search box
+	if search_dropdown_1 == 'gene_symbol':
+		print('Afirstsdropworking') #these print statment just test if im getting the expected value
+	if search_dropdown_1 == 'gene_title':
+		print('Bseconddropworking')
+	if search_dropdown_1 == 'pathway':
+		print('Cthirddropworking')
+	else:
+		print()
+	if search_box_1:
+		print(search_box_1)
 
-#End html
+#second search dropdown and search box
+	if search_dropdown_2 == 'gene_symbol':
+		print('Dfirstsdropworking')
+	if search_dropdown_2 == 'gene_title':
+		print('Eseconddropworking')
+	if search_dropdown_2 == 'pathway':
+		print('Fthirddropworking')
+	else:
+		print()
+	if search_box_2:
+		print(search_box_2)
+
+#third search dropdown and search box	
+	if search_dropdown_3 == 'gene_symbol':
+		print('Gfirstsdropworking')
+	if search_dropdown_3 == 'gene_title':
+		print('Hseconddropworking')
+	if search_dropdown_3 == 'pathway':
+		print('Ithirddropworking')
+	else:
+		print()
+	if search_box_3:
+		print(search_box_3)
+
+#if one of the five sort by options are selected
+#also querys if those are selected
+	if sort1:
+		#query1 += "sort by foldChange"
+		print(sort1)
+	if sort2:
+		#query1 += "sort by Gene.symbol"
+		print(sort2)
+	if sort3:
+		#query1 += "sort by Gene.title
+		print(sort3)
+	if sort4:
+		#query1 += "sort by pathTitle"
+		print(sort4)
+	if sort5:
+		#query1 += "sort by pathTitle"
+		print(sort5)	
+
+#TABLE CREATION				
+    #if rows:
+        #for row in rows:
+         #   print("""
+          #  <tr>
+           #     <td>%s</td>
+            #    <td>%s</td>
+             #   <td>%s</td>
+              #  <td>%s</td>
+               # <td>%s</td>
+            #</tr>"""%(row[0], row[1], row[2], row[3], row[4]))
+        #print("""</table>""")
+    #else:
+     #   print("""Please try searching again""")	
+
+
+#execute query above#### multiple cursor and execute statements might be needed
+#cursor.execute(query1)
+#used to store data after query to be called on to create table
+#rows = cursor.fetchall()
+
+#end the html code
 print("""
 </body>
 </html>
-""")
+""") 
