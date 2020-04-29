@@ -30,8 +30,9 @@ print(
 </style></head>")
 
 print("<body><center>
-<h1>Welcome to ApoER2 exon 19 Database</h1><br><br></center>
-<div id = intro><p>
+<h1>Welcome to ApoER2 exon 19 Database</h1></center>
+
+<center><div id = intro><p>
 Our project aims to organize the data from Dr.Beffert's study "Modulation of Synaptic Plasticity and Memory by Reelin Involves Differential Splicing of the Lipoprotein Receptor Apoer2". 
 The experiment compares the genotype of two mice conditions from three biological samples. Then, RNA was extracted from the cortical brain regions, and one gene chip was used on each sample. 
 The main difference between the two conditions has to do with the presence of exon 19 in the alternative splice variants of Apoer2 receptor. At this point, our database allows the user to easily search the data by gene symbol, gene title, GO terms, many more 
@@ -40,7 +41,7 @@ and the users can find the GO terms as well as the pathways the genes are involv
 </p></div></center>
 
 <left><div id = "members"><p>
-<b>Designed by:</b> Cory Williams, Erin Berg, Dhanatt Horatanachai, Michiel Smit<br>
+<b>Designed by:</b> Cory Williams, Erin Berg, Dhanatt (Mark) Horatanachai, Michiel Smit<br>
 <b>Data source:</b> Dr.Uwe Beffert, Department of Biology<br>
 Class: Biological Database system 768, Dr. Gary Benson, Spring 2020
 </p></div></left>")
