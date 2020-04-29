@@ -1,6 +1,5 @@
 #!/usr/local/Python-3.7/bin/Python
 import pymysql
-import sys
 import cgi
 import cgitb
 
@@ -11,7 +10,13 @@ print("<html><head>")
 print("<title>Reference</title>")
 
 print("<style>
-
-</style></head>")
+body{font-family:"Times New Roman"; font-size:15px;}
+#RPD{
+    border-style: solid;
+    border-color: black;
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+}"
 
 print("<h1>References</h1>)
