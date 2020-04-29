@@ -16,7 +16,7 @@ print("""<html><head>
         border-color:#fa8072;
         padding: 15px;
         text-align: center;
-        font-size: 20px;
+        font-size: 15px;
         }
 </style></head>
 """)
