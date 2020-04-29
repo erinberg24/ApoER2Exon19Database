@@ -26,7 +26,7 @@ print("""<div id = login>
 <form method="POST" action="" id=login_form>
 <p>Username: <input type = "text" name="name"  required/></p>
 <p>Password: <input type = "text" name="password" reqired/></p>
-<p> <input type="submit" value="Submit"> </p>
+<p> <input type="submit" value="Enter"> </p>
 </form></div>""")
 
 form = cgi.FieldStorage()
