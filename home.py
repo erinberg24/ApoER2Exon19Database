@@ -12,7 +12,7 @@ print("<title>Home Page</title>")
 
 print(
 "<style>
-    body{font-family:"Times New Roman"; font-size:15px;})
+    body{font-family:"Times New Roman"; font-size:15px;}
     #intro{
         border-style: solid;
         border-color: black;
