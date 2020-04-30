@@ -52,25 +52,25 @@ print("<body>
 <h1>References</h1>
 
 <div id = des><p>
-We would like to thank you these free, and open source database in order for us to find, and to get the useful information about mouse to be successfully in this project. 
-To get access into these helpful websites, please click on "Reactome Pathway Database", "NCBI", "Gene Ontology", and "Affymetrix". These links will automatically connect and open 
-a new browser tab of the website.</p></div>
+We would like to recognize these free and open source databases that allowed us to search through useful information about the mouse genome in order to succesfully complete this project. 
+To access these helpful websites, please click on "Reactome Pathway Database", "NCBI", "Gene Ontology", and "Affymetrix". These links will automatically connect and open 
+a new browser tab to their respective websites.</p></div>
 
 <div id = RPD><p>
-For the reactome website, there is a quick search for reaction, protein, and pathway. Once searching for the result, there will be list of search but
-if the users know which species, type, or compartments they are looking for. It will be reduced the search results.</p></div>
+For the reactome website, we can quickly search through the reaction, protein, and pathway. There is a list of categories users can search by but
+if the users know exactly which species, type, or compartments they are looking for, then the resulting output will be significantly reduced.</p></div>
 
 <div id = ncbi><p>
-For a quick access into NCBI website, the popular resource is on the right-hand side of the webpage. By clicking on gene, the system will link to the search gene page, and the
-users can search whatever gene symbol is.</p></div>
+In the NCBI website, the popularly used resources are on the right-hand side of the webpage. By clicking on gene, the system will link to the search gene page, and
+users can then search for a particular gene symbol.</p></div>
 
 <div id = onto><p>
-For this website, it allows us to add the gene ID and at the same time to select the biological process or molecular function with the specific species. To click on "launch", the 
+The website allows us to add the gene ID while selecting for the biological process or molecular function for a specific species. By clicking on "launch", the 
 search result will pop-up.</p></div>
 
 <div id = affy><p>
-By clicking on the affymetrix website, the system will connect to the homepage website. By clicking on "Affymetrix microarray data analysis", there will be a search box for a user to 
-search for affymetrix id. Once searching, just clicking on "Gene expression assays" and the result will appear.</p></div>
+By clicking on the affymetrix website, the system will connect to the homepage website. Once the "Affymetrix microarray data analysis" is clicked, there will be a search box which allows  
+users to search for the affymetrix id. The users can then simply click on "Gene expression assays" and the results will appear.</p></div>
 
 <a href ="https://reactome.org/" target="_blank">Reactome Pathway Database</a>
 
