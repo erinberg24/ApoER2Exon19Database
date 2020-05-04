@@ -1,5 +1,4 @@
 #!/usr/local/Python-3.7/bin/Python
-import pymysql
 import cgi
 import cgitb
 
