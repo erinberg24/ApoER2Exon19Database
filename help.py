@@ -56,7 +56,9 @@ pathway from those respective tables.</p></div>
 </p></div>
 
 <div id = ref><p>
-Our reference page includes the ApoER2 article as a primary reference in order to get an information and 
-understand how the experiment was done. This webpage moreover connects to free and open source database  
-</p></div>
-")
+Our reference page includes the ApoER2 article as a primary reference in order to get an information and understand how the experiment was done. 
+Moreover, this webpage includes very helpful database as the secondary such as Reactome Pathway Database, NCBI, Gene Ontology, and Pathway.</p></div>
+
+</body>")
+
+print("</html>")
