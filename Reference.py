@@ -83,7 +83,7 @@ search for affymetrix id. Once searching, just clicking on "Gene expression assa
 This article was published by professor's Beffert and his team members. For brief description in this article, brain samples were obtained from the cortical regions of 2 sets of 3 different three weeks mice. RNA was extracted from each set
 and pooled into one affymetrix microarray chip per set, so the sets were determined based on two conditions; the first condition is a receptor variant that is lacking exon 19 and the second condition is a receptor variant that is not lacking exon 19. 
 Then, a receptor variant is known as Apolipoprotein E receptor (ApoER2), which is a member of the LDL receptor gene family and is critical for normal neuronal positioning in
-the neocortex and in the hippocampus. 
+the neocortex and in the hippocampus.
 
 <a href ="https://www.cell.com/neuron/supplemental/S0896-6273(05)00601-X" target="_blank">ApoER2 Article</a>
 
