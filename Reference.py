@@ -59,15 +59,9 @@ print("<body>
 <h1>References</h1>
 
 <div id = des><p>
-<<<<<<< HEAD
 We would like to thank you these free, and open source database and the article from the faculty advisor in order for us to find, and to get the useful information about mouse to be successfully in this project. 
 To get access into these helpful websites, please click on "Reactome Pathway Database", "NCBI", "Gene Ontology", and "Affymetrix". These links will automatically connect and open 
 a new browser tab of the website.</p></div>
-=======
-We would like to recognize these free and open source databases that allowed us to search through useful information about the mouse genome in order to succesfully complete this project. 
-To access these helpful websites, please click on "Reactome Pathway Database", "NCBI", "Gene Ontology", and "Affymetrix". These links will automatically connect and open 
-a new browser tab to their respective websites.</p></div>
->>>>>>> 6a093c709f9473544a8ec94fbaf6e8186e9268c5
 
 <div id = RPD><p>
 For the reactome website, we can quickly search through the reaction, protein, and pathway. There is a list of categories users can search by but
