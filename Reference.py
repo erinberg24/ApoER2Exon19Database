@@ -46,13 +46,20 @@ body{font-family:"Times New Roman"; font-size:15px;}
     text-align: left;
     font-size: 20px;
     }
+#paper{
+    border-style: solid;
+    border-color: black;
+    padding: 15px;
+    text-align: left;
+    font-size: 20px;
+    }
 </style></head>")
 
 print("<body>
 <h1>References</h1>
 
 <div id = des><p>
-We would like to thank you these free, and open source database in order for us to find, and to get the useful information about mouse to be successfully in this project. 
+We would like to thank you these free, and open source database and the article from the faculty advisor in order for us to find, and to get the useful information about mouse to be successfully in this project. 
 To get access into these helpful websites, please click on "Reactome Pathway Database", "NCBI", "Gene Ontology", and "Affymetrix". These links will automatically connect and open 
 a new browser tab of the website.</p></div>
 
@@ -71,6 +78,14 @@ search result will pop-up.</p></div>
 <div id = affy><p>
 By clicking on the affymetrix website, the system will connect to the homepage website. By clicking on "Affymetrix microarray data analysis", there will be a search box for a user to 
 search for affymetrix id. Once searching, just clicking on "Gene expression assays" and the result will appear.</p></div>
+
+<div id = paper><p>
+This article was published by professor's Beffert and his team members. For brief description in this article, brain samples were obtained from the cortical regions of 2 sets of 3 different three weeks mice. RNA was extracted from each set
+and pooled into one affymetrix microarray chip per set, so the sets were determined based on two conditions; the first condition is a receptor variant that is lacking exon 19 and the second condition is a receptor variant that is not lacking exon 19. 
+Then, a receptor variant is known as Apolipoprotein E receptor (ApoER2), which is a member of the LDL receptor gene family and is critical for normal neuronal positioning in
+the neocortex and in the hippocampus. 
+
+<a href ="https://www.cell.com/neuron/supplemental/S0896-6273(05)00601-X" target="_blank">ApoER2 Article</a>
 
 <a href ="https://reactome.org/" target="_blank">Reactome Pathway Database</a>
 
