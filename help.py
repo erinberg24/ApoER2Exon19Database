@@ -43,4 +43,20 @@ body{font-family:"Times New Roman"; font-size:15px;}
 print("<body
 <h1>Help</h1>
 
+<div id = home><p>
+When the users login into our website, our homepage consists of four tabs, which are "Home", "Search", "Visual", and "References" tabs.
+Our homepage includes a small description of the goal of this project with the names of members of group working, the faculty advisor, and 
+the class. There is a quick search on the footer, and the possible lists will be populated with all gene titles, symbols, go terms, and 
+pathway from those respective tables.</p></div>
+
+<div id = seach><p>
+</p></div>
+
+<div id = visual><p>
+</p></div>
+
+<div id = ref><p>
+Our reference page includes the ApoER2 article as a primary reference in order to get an information and 
+understand how the experiment was done. This webpage moreover connects to free and open source database  
+</p></div>
 ")
